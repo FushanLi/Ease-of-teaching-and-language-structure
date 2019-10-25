@@ -1,7 +1,7 @@
 # Ease-of-teaching-and-language-structure
 Code for NeurIPS 2019 paper: 
 
-F. Li and M. Bowling. **Ease-of-Teaching and Language Structure from Emergent Communication**. In Neural Information Processing Systems (NeurIPS), 2019
+F. Li and M. Bowling. **Ease-of-Teaching and Language Structure from Emergent Communication**. 
 
 The code is written in 
 
