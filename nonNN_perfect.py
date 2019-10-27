@@ -35,7 +35,7 @@ args['batchSize'] = 100  # total train data = batchSize * numIters
 args['sLearnRate'] = 0.001  
 args['rLearnRate'] = 0.001  
 args['slambda'] = 0.1  # regularizer, the larger the more exploration
-args['rlambda'] = 0.1
+args['rlambda'] = 0.05
 
 args['trainIters'] = 1000
 args['deterResetNums'] = 30
@@ -61,7 +61,7 @@ trainAccuracy_l = np.zeros(args['trainIters'] * args['deterResetNums'])
 
 for i in range(args['trainIters'] * args['deterResetNums']):
     candidates, targets = data.getBatchData(train_np, args['batchSize'], args['distractNum'])
-    sloss, rloss, message, rewards, _, _, _ = team.forward(targets, candidates, True, sOpt, True, False)
+    sloss, rloss, message, rewards, _, _, _ = team.forward(targets, candidates, False, sOpt, True, False)
     team.backward(sloss, rloss, sOpt)
 
     sloss_l[i] = sloss
